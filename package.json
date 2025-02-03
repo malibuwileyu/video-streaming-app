@@ -1,0 +1,16 @@
+{
+  "name": "reel-ai",
+  "version": "1.0.0",
+  "description": "AI-powered educational video platform",
+  "private": true,
+  "scripts": {
+    "firebase:emulators": "firebase emulators:start",
+    "firebase:deploy": "firebase deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "firebase-tools": "^13.0.2",
+    "prettier": "^3.2.2",
+    "eslint": "^8.56.0"
+  }
+} 
