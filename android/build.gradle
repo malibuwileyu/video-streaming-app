@@ -3,18 +3,11 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        maven {
-            url "https://storage.googleapis.com/download.flutter.io"
-        }
-        maven {
-            url "${project.rootProject.projectDir}/../.android/Flutter/build/hosting"
-        }
     }
 
     dependencies {
         classpath 'com.android.tools.build:gradle:8.2.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath 'com.google.gms:google-services:4.4.0'
     }
 }
 
@@ -22,12 +15,6 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        maven {
-            url "https://storage.googleapis.com/download.flutter.io"
-        }
-        maven {
-            url "${project.rootProject.projectDir}/../.android/Flutter/build/hosting"
-        }
     }
 }
 

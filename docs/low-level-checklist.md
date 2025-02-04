@@ -2,70 +2,45 @@
 
 ## Current Sprint: Core Feature Implementation
 
-### Authentication Module (TDD)
-- [x] Create AuthService interface
-  - [x] Write interface tests first
-  - [x] Define interface
-  - [x] Verify tests fail
-- [x] Create AuthException class
-  - [x] Write exception tests first
-  - [x] Implement exception handling
-  - [x] Verify tests pass
-- [x] Implement FirebaseAuthService
-  - [x] Write implementation tests first
-  - [x] Implement service
-  - [x] Verify tests pass
-- [x] Create auth UI components
-  - [x] Write widget tests first
-  - [x] Login screen
-  - [x] Registration screen
-  - [x] Password reset screen
-  - [x] Verify all tests pass
-- [x] Implement auth state management
-  - [x] Write state management tests
-  - [x] Implement state management
-  - [x] Verify tests pass
-- [x] Add auth navigation flow
-  - [x] Write navigation tests
-  - [x] Implement navigation
-  - [x] Verify tests pass
-- [x] Write integration tests
-  - [x] Define end-to-end test scenarios
-  - [x] Implement tests
-  - [x] Verify full flow
-
-### Video Upload Module (Next)
+### Video Upload Module
 - [ ] Create upload service
   - [ ] Write service tests first
   - [ ] Define service interface
   - [ ] Implement service
+  - [ ] Verify tests pass
 - [ ] Create upload UI components
   - [ ] Write widget tests first
-  - [ ] Implement components
+  - [ ] Video selection screen
+  - [ ] Upload progress screen
+  - [ ] Video preview component
+  - [ ] Verify all tests pass
 - [ ] Implement progress tracking
   - [ ] Write tracking tests
-  - [ ] Implement tracking
+  - [ ] Implement tracking service
+  - [ ] Add progress UI
+  - [ ] Verify tests pass
 - [ ] Add error handling
   - [ ] Write error tests
-  - [ ] Implement handling
+  - [ ] Implement error handling
+  - [ ] Add error UI
+  - [ ] Verify tests pass
 - [ ] Write integration tests
-  - [ ] Define scenarios
+  - [ ] Define end-to-end test scenarios
   - [ ] Implement tests
+  - [ ] Verify full flow
 
 ## Next Up
-- Start video upload module implementation
-- Set up video upload testing framework
 - Write video upload service tests
+- Define video upload service interface
+- Set up Firebase Storage configuration
 
 ## In Progress
-- ✅ Basic email authentication implementation (tests passing)
-- ✅ Setting up auth testing framework
-- ✅ Password reset functionality
+- Video upload module setup
 
 ## Validation Steps
 1. Run `flutter test --coverage` to verify test coverage
-2. Test Firebase initialization
-3. Verify auth flow in development environment
+2. Test Firebase Storage configuration
+3. Verify upload flow in development environment
 4. Create version tags for deployment:
    ```bash
    git tag -a v1.0.0 -m "Release version 1.0.0"
@@ -75,6 +50,6 @@
 ## Notes
 - Following strict TDD approach: tests first, then implementation
 - OAuth2 support planned for future sprint (tracked in backlog)
-- Currently focused on email authentication
+- Video upload size limits to be determined
 - UI components follow Material 3 design system
-- All auth integration tests passing 
+- All tests must pass before merging 
