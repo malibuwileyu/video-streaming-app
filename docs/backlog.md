@@ -3,13 +3,21 @@
 This file tracks features, improvements, and tasks that are not currently prioritized but may be implemented in the future.
 
 ## Feature Ideas
-- TBD
+- OAuth2 Authentication Integration
+  ```dart
+  // Future extension to AuthService
+  extension OAuth2Support on FirebaseAuthService {
+    Future<User?> signInWithGoogle();
+    Future<User?> signInWithGithub();
+    Future<User?> signInWithApple();  // iOS requirement
+  }
+  ```
 
 ## Technical Debt
-- TBD
+- None yet
 
 ## Nice-to-Have Improvements
-- TBD
+- None yet
 
 ## Known Issues
-- TBD 
+- None yet 

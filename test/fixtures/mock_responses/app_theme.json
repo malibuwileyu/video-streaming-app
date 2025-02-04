@@ -1,0 +1,19 @@
+{
+  "theme": {
+    "primaryColor": "#FF2196F3",
+    "secondaryColor": "#FF1976D2",
+    "backgroundColor": "#FFFAFAFA",
+    "textColor": "#DD000000",
+    "errorColor": "#FFD32F2F",
+    "spacing": {
+      "small": 8,
+      "medium": 16,
+      "large": 24
+    },
+    "typography": {
+      "headingSize": 24,
+      "bodySize": 16,
+      "captionSize": 12
+    }
+  }
+} 

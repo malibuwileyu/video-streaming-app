@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": "test_user_456",
+      "email": "test@example.com",
+      "displayName": "Test Creator",
+      "photoURL": "https://example.com/avatar.jpg",
+      "metadata": {
+        "creationTime": "2024-03-20T10:00:00Z",
+        "lastSignInTime": "2024-03-20T15:00:00Z"
+      },
+      "preferences": {
+        "theme": "dark",
+        "notifications": true
+      }
+    },
+    {
+      "id": "test_user_789",
+      "email": "viewer@example.com",
+      "displayName": "Test Viewer",
+      "photoURL": "https://example.com/avatar2.jpg",
+      "metadata": {
+        "creationTime": "2024-03-19T10:00:00Z",
+        "lastSignInTime": "2024-03-20T14:00:00Z"
+      },
+      "preferences": {
+        "theme": "light",
+        "notifications": false
+      }
+    }
+  ]
+} 
