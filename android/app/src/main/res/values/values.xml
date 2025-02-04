@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="project_id" translatable="false">reel-ai-dev-1d16a</string>
+    <string name="project_number" translatable="false">345756593133</string>
+    <string name="firebase_url" translatable="false">https://reel-ai-dev-1d16a-default-rtdb.firebaseio.com</string>
+    <string name="google_app_id" translatable="false">1:345756593133:android:58b6c44c0c58ce6115d5e4</string>
+    <string name="google_api_key" translatable="false">AIzaSyBA0IO-JPAGkKjJL-tBRc5xtM6Et4LTPjA</string>
+    <string name="google_storage_bucket" translatable="false">reel-ai-dev-1d16a.firebasestorage.app</string>
+    <string name="gcm_defaultSenderId" translatable="false">345756593133</string>
+    <string name="default_web_client_id" translatable="false">345756593133-web</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBA0IO-JPAGkKjJL-tBRc5xtM6Et4LTPjA</string>
+</resources> 
