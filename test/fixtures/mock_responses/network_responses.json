@@ -1,0 +1,31 @@
+{
+  "success": {
+    "status": 200,
+    "data": {
+      "message": "Operation successful",
+      "timestamp": "2024-03-20T10:00:00Z"
+    }
+  },
+  "error": {
+    "status": 400,
+    "error": {
+      "code": "INVALID_REQUEST",
+      "message": "Invalid request parameters",
+      "details": "Required field 'title' is missing"
+    }
+  },
+  "unauthorized": {
+    "status": 401,
+    "error": {
+      "code": "UNAUTHORIZED",
+      "message": "Authentication required"
+    }
+  },
+  "notFound": {
+    "status": 404,
+    "error": {
+      "code": "NOT_FOUND",
+      "message": "Resource not found"
+    }
+  }
+} 

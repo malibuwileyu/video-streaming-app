@@ -85,6 +85,7 @@ ui-debug.log
 **/functions/.env.*
 **/functions/lib/
 **/functions/coverage/
+**/firebase-credentials.json
 
 # Environment files
 .env
@@ -123,4 +124,42 @@ pip-delete-this-directory.txt
 htmlcov/
 .tox/
 .nox/
-.hypothesis/ 
+.hypothesis/
+
+# Firebase credentials
+backend/firebase-credentials.json
+
+# Dependencies
+node_modules/
+.pub-cache/
+.pub/
+build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+.DS_Store
+
+# Environment files
+.env
+.env.local
+*.env.json
+
+# Firebase
+.firebase/
+firebase-debug.log
+
+# Flutter/Dart
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/ 

@@ -189,4 +189,169 @@
    - Encryption at rest
    - Secure file transfer
    - Access control
-   - Privacy compliance 
+   - Privacy compliance
+
+# Test-Driven Development Guide
+
+## TDD Process
+
+### 1. Red-Green-Refactor Cycle
+1. **Red**: Write a failing test
+2. **Green**: Write minimal code to make the test pass
+3. **Refactor**: Clean up the code while keeping tests green
+
+### 2. Development Flow
+```dart
+// 1. Write the test first
+test('sign in with email returns user', () async {
+  final authService = MockAuthService();
+  when(authService.signInWithEmail(any, any))
+      .thenAnswer((_) async => mockUser);
+      
+  final result = await authService.signInWithEmail(
+    'test@example.com',
+    'password',
+  );
+  
+  expect(result, equals(mockUser));
+});
+
+// 2. Write the interface
+abstract class AuthService {
+  Future<User?> signInWithEmail(String email, String password);
+}
+
+// 3. Implement the concrete class
+class FirebaseAuthService implements AuthService {
+  @override
+  Future<User?> signInWithEmail(String email, String password) async {
+    // Implementation
+  }
+}
+```
+
+## Current TDD Status
+
+### Completed TDD Cycles
+- [x] AuthService interface
+- [x] AuthException handling
+- [x] FirebaseAuthService implementation
+- [x] Token storage
+
+### In Progress
+- [ ] Login screen
+- [ ] Form validation
+- [ ] Error handling UI
+
+### Next Up
+- Registration screen
+- Password reset flow
+- Auth state management
+
+## TDD Best Practices
+
+### 1. Test Structure
+```dart
+group('AuthService', () {
+  // Setup common test dependencies
+  setUp(() {
+    // Common setup
+  });
+
+  // Group related test cases
+  group('signInWithEmail', () {
+    test('successful sign in', () async {
+      // Test case
+    });
+
+    test('handles invalid credentials', () async {
+      // Test case
+    });
+  });
+});
+```
+
+### 2. Mocking Guidelines
+```dart
+// Create mocks for external dependencies
+@GenerateMocks([FirebaseAuth, UserCredential])
+void main() {
+  late MockFirebaseAuth mockAuth;
+  
+  setUp(() {
+    mockAuth = MockFirebaseAuth();
+  });
+}
+```
+
+### 3. Test Coverage Requirements
+- Unit Tests: Must be written before implementation
+- Widget Tests: Must cover all user interactions
+- Integration Tests: Must verify feature workflows
+
+## Feature Implementation Process
+
+### 1. Authentication Module
+1. ✅ Write auth service tests
+2. ✅ Create auth service interface
+3. ✅ Implement Firebase auth service
+4. 🔄 Write auth UI component tests
+5. 🔄 Implement auth UI components
+
+### 2. Video Upload Module (Next)
+1. Write upload service tests
+2. Create upload service interface
+3. Implement Firebase upload service
+4. Write upload UI component tests
+5. Implement upload UI components
+
+## Testing Tools
+
+### Required Packages
+```yaml
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mockito: ^5.4.4
+  build_runner: ^2.4.8
+  test_coverage: ^0.5.0
+```
+
+### Test Commands
+```bash
+# Run tests with coverage
+flutter test --coverage
+
+# Generate coverage report
+genhtml coverage/lcov.info -o coverage/html
+
+# Watch tests during development
+flutter test --watch
+```
+
+## TDD Validation Steps
+
+### Before Implementation
+1. Write failing test
+2. Verify test fails for expected reason
+3. Document expected behavior
+
+### During Implementation
+1. Write minimal code to pass test
+2. Run all tests to verify no regressions
+3. Commit after each passing test
+
+### After Implementation
+1. Refactor if needed
+2. Verify all tests still pass
+3. Review test coverage
+
+## Code Review Guidelines
+
+### TDD Checklist
+- [ ] Tests written before implementation
+- [ ] Tests cover edge cases
+- [ ] Tests are readable and maintainable
+- [ ] Implementation satisfies tests
+- [ ] No unnecessary code
+- [ ] Tests run in CI pipeline 
