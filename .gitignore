@@ -4,6 +4,7 @@
 # Miscellaneous
 *.class
 *.log
+*.log.*
 *.pyc
 *.swp
 .DS_Store
@@ -11,7 +12,9 @@
 .buildlog/
 .history
 .svn/
+.swiftpm/
 migrate_working_dir/
+.build/
 
 # IntelliJ related
 *.iml
@@ -34,6 +37,8 @@ migrate_working_dir/
 /build/
 *.g.dart
 *.freezed.dart
+.metadata
+pubspec.lock
 
 # Android related
 **/android/**/gradle-wrapper.jar
@@ -43,6 +48,14 @@ migrate_working_dir/
 **/android/gradlew.bat
 **/android/local.properties
 **/android/**/GeneratedPluginRegistrant.java
+local.properties
+key.properties
+**/*.keystore
+**/*.jks
+/android/app/debug
+/android/app/profile
+/android/app/release
+**/android/app/google-services.json
 
 # iOS/XCode related
 **/ios/**/*.mode1v3
@@ -71,12 +84,39 @@ migrate_working_dir/
 **/ios/Flutter/flutter_export_environment.sh
 **/ios/ServiceDefinitions.json
 **/ios/Runner/GeneratedPluginRegistrant.*
+**/ios/Runner/GoogleService-Info.plist
+**/ios/Runner/*.mobileprovision
+**/ios/Runner/*.provisionprofile
+**/dgph
+!default.mode1v3
+!default.mode2v3
+!default.pbxuser
+!default.perspectivev3
+
+# macOS related
+**/Flutter/ephemeral/
+**/Pods/
+
+# Linux related
+**/flutter/ephemeral/
+
+# Windows related
+**/flutter/ephemeral/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+x64/
+x86/
+*.[Cc]ache
+!*.[Cc]ache/
 
 # Firebase
 .firebase/
 **/google-services.json
 **/GoogleService-Info.plist
 firebase-debug.log
+firebase-debug.*.log
 firestore-debug.log
 ui-debug.log
 .runtimeconfig.json
@@ -86,6 +126,12 @@ ui-debug.log
 **/functions/lib/
 **/functions/coverage/
 **/firebase-credentials.json
+.firebaserc
+database.rules.json
+storage.rules
+firestore.rules
+firestore.indexes.json
+*.local
 
 # Environment files
 .env
@@ -94,6 +140,11 @@ ui-debug.log
 .env.development
 .env.test
 .env.production
+.env.staging
+backend/.env
+backend/.env.*
+functions/.env
+functions/.env.*
 
 # Coverage
 coverage/
@@ -107,6 +158,8 @@ test/.test_coverage.dart
 *.apk
 *.ipa
 *.aab
+app.*.symbols
+app.*.map.json
 
 # Python
 venv/
@@ -126,9 +179,6 @@ htmlcov/
 .nox/
 .hypothesis/
 
-# Firebase credentials
-backend/firebase-credentials.json
-
 # Dependencies
 node_modules/
 .pub-cache/
@@ -138,28 +188,33 @@ build/
 .flutter-plugins
 .flutter-plugins-dependencies
 
-# IDE
-.idea/
-.vscode/
-*.iml
-*.iws
-.DS_Store
+# Secrets and Keys
+**/*.key
+**/*.pem
+**/*.p12
+**/*.pfx
+**/*-key.json
+**/secrets.json
+**/credentials.json
+**/service-account.json
+backend/firebase-credentials.json
+backend/**/*.pem
+backend/app/config/*.json
+backend/config/*.json
 
-# Environment files
-.env
-.env.local
-*.env.json
+# Logs and Debug
+backend/logs/
+**/debug.log
+**/error.log
+**/*.debug.log
+**/*.error.log
+**/debug/
+**/logs/
 
-# Firebase
-.firebase/
-firebase-debug.log
-
-# Flutter/Dart
-*.log
-*.pyc
-*.swp
-.DS_Store
-.atom/
-.buildlog/
-.history
-.svn/ 
+# Local Configuration
+**/*.local.json
+**/*.local.yaml
+**/*.local.yml
+**/*.local.properties
+**/local.settings.json
+**/appsettings.*.json 
